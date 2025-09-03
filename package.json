@@ -1,0 +1,38 @@
+{
+  "name": "unique-auth-frontend",
+  "version": "1.0.0",
+  "description": "A frontend project featuring extremely unique CSS and HTML designs for login and register pages with cosmic and futuristic themes",
+  "main": "index.html",
+  "scripts": {
+    "start": "serve .",
+    "dev": "live-server .",
+    "build": "echo 'No build process needed for static files'",
+    "lint": "echo 'No linting configured'"
+  },
+  "keywords": [
+    "frontend",
+    "authentication",
+    "cosmic",
+    "futuristic",
+    "unique",
+    "css",
+    "html",
+    "javascript",
+    "animations",
+    "particles"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.0.0",
+    "live-server": "^1.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/unique-auth-frontend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/unique-auth-frontend/issues"
+  },
+  "homepage": "https://github.com/yourusername/unique-auth-frontend#readme"
+}

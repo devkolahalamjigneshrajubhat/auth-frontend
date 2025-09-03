@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrnD Chatter </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Orbitron', 'Segoe UI', sans-serif;
+            background: linear-gradient(45deg, #0a0a0f 0%, #0f0f0a 50%, #000000 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bg-pattern {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 25% 25%, rgba(0, 212, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, rgba(0, 255, 136, 0.05) 0%, transparent 50%);
+            animation: patternMove 20s ease-in-out infinite alternate;
+        }
+        
+        @keyframes patternMove {
+            0% { transform: scale(1) rotate(0deg); }
+            100% { transform: scale(1.1) rotate(5deg); }
+        }
+        
+        .container {
+            text-align: center;
+            z-index: 10;
+            padding: 2rem;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #00d4ff, #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes titleGlow {
+            0% { filter: drop-shadow(0 0 20px rgba(0, 212, 255, 0.5)); }
+            100% { filter: drop-shadow(0 0 30px rgba(0, 255, 136, 0.5)); }
+        }
+        
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 3rem;
+            color: #cccccc;
+            max-width: 600px;
+        }
+        
+        .links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .link-card {
+            display: block;
+            text-decoration: none;
+            padding: 1.5rem 2rem;
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), rgba(0, 255, 136, 0.1));
+            border: 2px solid transparent;
+            border-radius: 15px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            min-width: 200px;
+        }
+        
+        .link-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .link-card:hover::before {
+            left: 100%;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 212, 255, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+        
+        .cosmic-link {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.2), rgba(255, 0, 128, 0.1));
+        }
+        
+        .cosmic-link:hover {
+            border-color: rgba(0, 212, 255, 0.8);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+        }
+        
+        .nexus-link {
+            background: linear-gradient(135deg, rgba(0, 255, 136, 0.2), rgba(255, 102, 0, 0.1));
+        }
+        
+        .nexus-link:hover {
+            border-color: rgba(0, 255, 136, 0.8);
+            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
+        }
+        
+        .link-title {
+            display: block;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .link-desc {
+            font-size: 0.9rem;
+            color: #cccccc;
+            font-weight: normal;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .link-card {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-pattern"></div>
+    
+    <div class="container">
+        <h1>FrnD Chatter</h1>
+        <p>Experience the future of authentication with our extremely unique and creative login and registration interfaces featuring cosmic and futuristic design elements.</p>
+        
+        <div class="links">
+            <a href="login.html" class="link-card cosmic-link">
+                <span class="link-title">Cosmic Portal</span>
+                <span class="link-desc">Access the cosmic login portal with holographic effects and particle animations</span>
+            </a>
+            
+            <a href="register.html" class="link-card nexus-link">
+                <span class="link-title">Nexus Registry</span>
+                <span class="link-desc">Initialize your nexus connection with digital rain and quantum field effects</span>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

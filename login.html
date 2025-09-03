@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Login Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="login-body">
+    <!-- Animated Background Elements -->
+    <div class="cosmic-bg">
+        <div class="stars"></div>
+        <div class="nebula"></div>
+        <div class="floating-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+    </div>
+
+    <!-- Main Login Portal -->
+    <div class="portal-container">
+        <div class="portal-frame">
+            <div class="portal-glow"></div>
+            
+            <!-- Hexagonal Login Form -->
+            <div class="hexagon-form">
+                <div class="hex-inner">
+                    <div class="form-content">
+                        <div class="portal-title">
+                            <h1 class="glitch-text" data-text="ACCESS PORTAL">ACCESS PORTAL</h1>
+                            <div class="title-underline"></div>
+                        </div>
+
+                        <form class="cosmic-form" id="loginForm">
+                            <!-- Floating Input Container -->
+                            <div class="input-constellation">
+                                <div class="floating-input">
+                                    <div class="input-wrapper">
+                                        <input type="email" id="email" class="cosmic-input" required>
+                                        <label for="email" class="floating-label">
+                                            <span class="label-text">Email Coordinates</span>
+                                            <div class="label-particles"></div>
+                                        </label>
+                                        <div class="input-border"></div>
+                                    </div>
+                                </div>
+
+                                <div class="floating-input">
+                                    <div class="input-wrapper">
+                                        <input type="password" id="password" class="cosmic-input" required>
+                                        <label for="password" class="floating-label">
+                                            <span class="label-text">Quantum Key</span>
+                                            <div class="label-particles"></div>
+                                        </label>
+                                        <div class="input-border"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Holographic Submit Button -->
+                            <div class="button-container">
+                                <button type="submit" class="hologram-button">
+                                    <span class="button-text">ENTER PORTAL</span>
+                                    <div class="button-glow"></div>
+                                    <div class="button-rings">
+                                        <div class="ring ring-1"></div>
+                                        <div class="ring ring-2"></div>
+                                        <div class="ring ring-3"></div>
+                                    </div>
+                                </button>
+                            </div>
+
+                            <!-- Floating Action Links -->
+                            <div class="portal-links">
+                                <a href="#" class="plasma-link">
+                                    <span class="link-text">Forgot Quantum Key?</span>
+                                    <div class="link-spark"></div>
+                                </a>
+                                <a href="register.html" class="plasma-link register-link">
+                                    <span class="link-text">Create New Portal</span>
+                                    <div class="link-spark"></div>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Energy Rings Around Portal -->
+            <div class="energy-rings">
+                <div class="energy-ring ring-outer"></div>
+                <div class="energy-ring ring-middle"></div>
+                <div class="energy-ring ring-inner"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Particle System -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
+    <!-- Loading Animation -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-portal">
+            <div class="loading-ring"></div>
+            <div class="loading-text">Accessing Portal...</div>
+        </div>
+    </div>
+
+    <script src="js/particles.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>
